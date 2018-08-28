@@ -30,9 +30,10 @@ gulp.task('sass', function(){
 		cascade: false
 	}))
 	.pipe(sourcemaps.write('.'))
-	.pipe(gulp.dest('app/css'))
-	.pipe(browserSync.reload({stream: true}))
-	.pipe(notify('SCSS complete'))
+	.pipe(plumber.stop())
+    .pipe(gulp.dest('app/css'))
+    .pipe(browserSync.reload({stream: true}))
+    .pipe(notify({message:'SCSS complete', onLast: true}))
 });
 
 gulp.task('browser-sync', function(){
