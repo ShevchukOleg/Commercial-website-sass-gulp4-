@@ -1,0 +1,100 @@
+.card {
+	border-radius: 0;
+
+	&-body {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding:$card-spacer-x-top $card-spacer-x  $card-spacer-x-bt;
+		}
+
+	&-cat {
+		font-weight: $font-weight-medium;
+		}
+
+	&-img-left {
+		/*position: absolute;*/
+		float: left;
+		/*display: block;*/
+		/*width:  auto;
+		height: 100%;*/
+		border: $card-border-width solid $card-border-color;
+		}
+
+	&-footer {
+		background-color:transparent;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding:$spacer $card-spacer-x;
+		}
+	&-ststistic {
+		display: flex;
+		justify-content: space-between;
+		width: 55%;
+	}
+
+
+	.card-autor {
+		display: flex;
+		align-items: center;
+		}
+
+	.card-autor-img {
+		display: inline-block;
+		width: 30px;
+		height:30px;
+		border-radius: 50%;
+		background-color: $grey-800;
+		margin-right: 10px;
+		}
+
+	&-autor-name {
+		color: $cyan;
+
+		&:hover {
+			color:primary;
+		}
+	}
+
+	.card-raiting-icon {
+		color: $orange;
+		transition: 0.2s;
+		cursor: pointer;
+		&.marked, &:hover {
+			&:before{
+				content: '\f005';
+			}
+		}
+	}
+
+	.card-rating, .card-feedback, .card-likes{
+		font-size: $font-size-sm;
+		flex-basis: 33.33%;
+		text-align: center;}
+
+	.card-feedback, .card-likes {
+		border-left: 2px solid $cyan;
+	}
+
+	.card-rating-number {
+		color: $cyan;
+		}
+
+	.card-rating-value {
+		color: $dark;
+		}
+	> h2 {
+		line-height: 60px;
+	}
+
+	h2 + .card-rating-number {
+		font-size: $font-size-base*0.8125;
+		line-height: 60px;
+	}
+}
+
+	a.card-cat + p.card-text {
+		margin-top: 10px;
+	}
+
