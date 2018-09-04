@@ -9883,6 +9883,32 @@ a.text-dark:hover, a.text-dark:focus {
   overflow: visible;
   clip: auto; }
 
+.btn-primary {
+  color: #212529;
+  background-color: #8bc34a;
+  border-color: #8bc34a;
+  color: #fff; }
+  .btn-primary:hover {
+    color: #fff;
+    background-color: #78ad39;
+    border-color: #71a436; }
+  .btn-primary:focus, .btn-primary.focus {
+    -webkit-box-shadow: 0 0 0 0.2rem rgba(139, 195, 74, 0.5);
+    box-shadow: 0 0 0 0.2rem rgba(139, 195, 74, 0.5); }
+  .btn-primary.disabled, .btn-primary:disabled {
+    color: #212529;
+    background-color: #8bc34a;
+    border-color: #8bc34a; }
+  .btn-primary:not(:disabled):not(.disabled):active, .btn-primary:not(:disabled):not(.disabled).active,
+  .show > .btn-primary.dropdown-toggle {
+    color: #fff;
+    background-color: #71a436;
+    border-color: #6a9a33; }
+    .btn-primary:not(:disabled):not(.disabled):active:focus, .btn-primary:not(:disabled):not(.disabled).active:focus,
+    .show > .btn-primary.dropdown-toggle:focus {
+      -webkit-box-shadow: 0 0 0 0.2rem rgba(139, 195, 74, 0.5);
+      box-shadow: 0 0 0 0.2rem rgba(139, 195, 74, 0.5); }
+
 .card {
   border-radius: 0; }
   .card-body {
@@ -9899,12 +9925,16 @@ a.text-dark:hover, a.text-dark:focus {
   .card-cat {
     font-weight: 500; }
   .card-img-left {
-    /*position: absolute;*/
-    float: left;
-    /*display: block;*/
-    /*width:  auto;
-		height: 100%;*/
+    display: inline-block;
+    width: 240px;
+    height: 180px;
+    overflow: hidden;
     border: 1px solid rgba(0, 0, 0, 0.125); }
+  .card img {
+    border-radius: 0; }
+  .card-img-top-wrapper {
+    max-height: 250px;
+    overflow: hidden; }
   .card-footer {
     background-color: transparent;
     display: -webkit-box;
@@ -9954,7 +9984,9 @@ a.text-dark:hover, a.text-dark:focus {
     font-size: 0.75rem;
     -ms-flex-preferred-size: 33.33%;
     flex-basis: 33.33%;
-    text-align: center; }
+    text-align: center;
+    -ms-flex-preferred-size: auto;
+    flex-basis: auto; }
   .card .card-feedback, .card .card-likes {
     border-left: 2px solid #546e7a; }
   .card .card-rating-number {

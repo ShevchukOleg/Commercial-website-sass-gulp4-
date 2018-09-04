@@ -1,7 +1,9 @@
 .card {
 	border-radius: 0;
 
-	&-body {
+	
+
+	&-body,  {
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
@@ -13,13 +15,18 @@
 		}
 
 	&-img-left {
-		/*position: absolute;*/
-		float: left;
-		/*display: block;*/
-		/*width:  auto;
-		height: 100%;*/
+		display: inline-block;
+		width:  240px;
+		height: 180px;
+		overflow: hidden;
 		border: $card-border-width solid $card-border-color;
 		}
+	img {border-radius: 0;}
+
+	&-img-top-wrapper{
+		max-height: 250px;
+		overflow: hidden;
+	}
 
 	&-footer {
 		background-color:transparent;
@@ -71,7 +78,8 @@
 	.card-rating, .card-feedback, .card-likes{
 		font-size: $font-size-sm;
 		flex-basis: 33.33%;
-		text-align: center;}
+		text-align: center;
+		flex-basis:auto;}
 
 	.card-feedback, .card-likes {
 		border-left: 2px solid $cyan;
