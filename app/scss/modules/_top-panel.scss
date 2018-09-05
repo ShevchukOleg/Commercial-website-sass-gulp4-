@@ -1,3 +1,53 @@
 .account-information {
-	
+	.messages-block {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		.btn {
+			position:relative;
+			font-size: 14px;
+			border-radius: 50%;
+			padding:0;
+			width: 34px;
+			height: 34px;
+			line-height: 34px;
+			text-align: center;
+			margin: 0 3px;
+			.badge {
+				position: absolute;
+				border-radius:50%;
+				color: $white;
+			}
+
+		}
+
+		.dropdown-menu {
+			border: 1px solid $grey-700;
+			padding:0;
+			margin:0;
+			border-radius:0;
+			.dropdown-item + .dropdown-item {
+				border-top: 1px solid $grey-700;
+			}
+		}
+
+		.dropdown-item {
+			padding: 20px 15px;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+
+			.img-wrapper {
+				width: 54px;
+				height: 54px;
+				background-color: $grey-700;
+				overflow: hidden;
+				border-radius: 50%;
+			}
+			.message {
+				margin-left: 30px;
+				margin-right: 40px;
+			}
+		}
+	}
 }
