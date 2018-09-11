@@ -1,9 +1,19 @@
 .account-information {
+	margin-left: -1rem;
+	margin-right: -1rem;
+
+	.info-inner {
+		margin-left: 1rem;
+		margin-right: 1rem;}
+
+	.info-inner:last-of-type {
+		margin-left: 2rem;}
+	
 	.messages-block {
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
-		.btn {
+		.btn-round {
 			position:relative;
 			font-size: 14px;
 			border-radius: 50%;
@@ -13,6 +23,7 @@
 			line-height: 34px;
 			text-align: center;
 			margin: 0 3px;
+
 			.badge {
 				position: absolute;
 				border-radius:50%;
@@ -22,32 +33,180 @@
 		}
 
 		.dropdown-menu {
-			border: 1px solid $grey-700;
+			border: 1px solid $gray-700;
 			padding:0;
 			margin:0;
 			border-radius:0;
 			.dropdown-item + .dropdown-item {
-				border-top: 1px solid $grey-700;
-			}
+				border-top: 1px solid $gray-700;}
 		}
 
-		.dropdown-item {
-			padding: 20px 15px;
-			display: flex;
-			align-items: center;
-			justify-content: space-between;
+		
+		.flex-col{
+				flex-direction: column;
+				.sum {
+				display: flex;
+				width: 100%;
+				flex-direction: row;
+				justify-content: space-between;
+				p {
+					font-weight: 700;
+					margin: 2px 27px 8px 20px;
+					}
 
+				}
+				.btn-groupe {
+					display: flex;
+					width: 100%;
+					justify-content: space-around;
+					padding: 5px 17px 12px;
+					.btn {
+						font-size: 14px;
+						border-radius: 0;
+						padding: 6px 10px 6px 10px;
+					}
+
+				}
+		}
+
+		.dropdown-item{
+			display: flex;
+			align-items: stretch;
+		}
+		
+		.advice{
+			.dropdown-item{
+			.message-data{
+				margin-top: 8px;
+				margin-bottom: 5px;
+				}
+			}}
+
+		.mail .dropdown-item, .advice .dropdown-item {
+			width: 267px;
+			padding: 16px 21px ;
 			.img-wrapper {
-				width: 54px;
-				height: 54px;
-				background-color: $grey-700;
+				width: 50px;
+				height: 50px;
+				background-color: $gray-700;
 				overflow: hidden;
 				border-radius: 50%;
+					img[alt="Sempl"]{
+							height: 50px;
+
+					}
 			}
-			.message {
-				margin-left: 30px;
-				margin-right: 40px;
+
+
+			.notification {
+				/*display: flex;*/
+				height: 100%;
+				/*flex-direction: column;
+				align-content:center;*/
+				margin-top: 4px;
+				margin-left: 20px;
+				margin-right: 20px;
+
+				.message-title {
+					font-size: 12px;
+					font-weight: 400;
+
+				}
+				.message-author{
+					padding-top: 1px;
+					padding-bottom: 2px;
+					font-size: 0.75rem;
+					font-weight: 700;
+				}
+
+				.remark{
+					font-size: 0.6875rem;
+					font-weight: 400;
+					margin-bottom: 0;
+				}
+
+				.message-data{
+					font-size: 0.625rem;
+					font-weight: 400;
+					color: $gray-900;
+				}
+
+				.platform-type{
+					margin-bottom: 0;
+					color: $primary;
+					font-size: 12px;
+					margin-bottom: 4px;
+					}
+				 }
+			.message-notificdtion {
+					position: absolute;
+					right:28px;
+					color: $gray-600;
+					padding-top: 12px;
+					}
+			.message-notificdtion:active{
+				color: $orange;
 			}
+		}
+		.acquiring .dropdown-item{
+			padding: 17px 10px;
+			 .img-wrapper-rectangle {
+					width: 74px;
+					height: 58px;
+					background-color: $gray-700;
+					overflow: hidden;
+					margin-left: 12px;
+						img[alt="Sempl"]{
+							height: 58px;
+
+					}
+				}
+			
+
+			.notification {
+				margin-left: 14px;
+				margin-right: 60px;
+				.purchase-sample > a {
+					font-size: 15px;
+					font-weight: 500;
+					}
+				.platform-type{
+					margin-bottom: 0;
+					color: $primary;
+					font-size: 12px;
+					margin-bottom: 4px;
+					}
+				 }
+			.message-notificdtion{
+					color: $gray-600;
+					}
+
+		}
+	}
+
+	.info-inner-user{
+		display: flex;
+		align-items: center;
+
+		.user-logo {
+			display: inline-block;
+			width: 34px;
+			height: 34px;
+			border-radius: 50%;
+			background-color: #b5b5b5;
+			margin-right: 1rem;
+			vertical-align: middle;
+			overflow: hidden;
+				img{width: 38px;
+					height: 38px;
+					}}
+
+		.dropdown-menu .dropdown-item:before {
+			font-family: 'FontAwesome';
+			content: '\f105';
+			color: $primary;
+			font-size: 14px;
+			margin-right: 10px;
 		}
 	}
 }

@@ -1,70 +1,100 @@
+@mixin card-broad-border-type {
+	border:{
+		radius: 0;
+		width: 1px;
+		style: solid;
+		color: $gray-500;}
+		&:hover {
+			box-shadow: -10px 21px 20px $gray-500;
+		}
+}
+
+@mixin card-border-type {
+	border-bottom:{
+		radius: 0;
+		width: 1px;
+		style: solid;
+		color: $gray-500;}
+		}
+
+
 .card {
-	border-radius: 0;
+	@include card-broad-border-type; //card-broad
+	border-top: none; //card-broad
 
-	
-
-	&-body,  {
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
-		padding:$card-spacer-x-top $card-spacer-x  $card-spacer-x-bt;
+	&-body  {			//card
+		display: flex; //card-broad card
+		align-items: center;//card-broad card
+		justify-content: space-between; //card-broad card
+		padding:$card-spacer-x-top $card-spacer-x  $card-spacer-x-bt; //card
 		}
 
 	&-cat {
-		font-weight: $font-weight-medium;
+		font-weight: $font-weight-medium; //card-broad card
 		}
+	
+ 	.bg-img { //card-broad
+		    background-image: url(/images/template-5.jpg);
+		    background-size: cover;
+			background-position: center;
+			background-repeat: no-repeat;
+	}
 
-	&-img-left {
-		display: inline-block;
-		width:  240px;
-		height: 180px;
+	&-img-left-wrapper{ //card-broad
+		min-height:183px;
+		display: block;
 		overflow: hidden;
-		border: $card-border-width solid $card-border-color;
+		@media (min-width: 992px){
+			-webkit-box-flex: 0;
+	    	-ms-flex: 0 0 27.5%;
+	    	flex: 0 0 27.5%;
+	    	max-width: 27.5%;
 		}
-	img {border-radius: 0;}
-
-	&-img-top-wrapper{
-		max-height: 250px;
-		overflow: hidden;
+		@media (min-width: 768px){
+			-webkit-box-flex: 0;
+	    	-ms-flex: 0 0 27.5%;
+	    	flex: 0 0 27.5%;
+	    	max-width: 27.5%;
+		}
 	}
 
 	&-footer {
-		background-color:transparent;
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
-		padding:$spacer $card-spacer-x;
+		background-color: transparent; //card-broad card
+		display: flex;//card-broad card
+		align-items: center;//card-broad card
+		justify-content: space-between;//card-broad card
+		padding: $spacer $card-spacer-x; //card
 		}
-	&-ststistic {
+	&-statistic { //card-broad
 		display: flex;
 		justify-content: space-between;
 		width: 55%;
 	}
 
 
-	.card-autor {
+	.card-autor {//card-broad card
 		display: flex;
 		align-items: center;
 		}
 
-	.card-autor-img {
+	.card-autor-img { //card-broad card
 		display: inline-block;
 		width: 30px;
 		height:30px;
 		border-radius: 50%;
-		background-color: $grey-800;
+		background-color: $gray-800;
 		margin-right: 10px;
 		}
 
-	&-autor-name {
+	&-autor-name { //card-broad card
 		color: $cyan;
 
 		&:hover {
-			color:primary;
+			color:$primary; //card-broad card
 		}
 	}
 
-	.card-raiting-icon {
+	.card-raiting-icon { //card-broad card
 		color: $orange;
 		transition: 0.2s;
 		cursor: pointer;
@@ -75,34 +105,33 @@
 		}
 	}
 
-	.card-rating, .card-feedback, .card-likes{
+	.card-rating, .card-feedback, .card-likes{ //card-broad card
 		font-size: $font-size-sm;
-		flex-basis: 33.33%;
 		text-align: center;
 		flex-basis:auto;}
 
-	.card-feedback, .card-likes {
+	.card-feedback, .card-likes {  //card-broad
 		border-left: 2px solid $cyan;
 	}
 
-	.card-rating-number {
+	.card-rating-number {//card-broad
 		color: $cyan;
 		}
 
-	.card-rating-value {
+	.card-rating-value { //card-broad card
 		color: $dark;
 		}
-	> h2 {
+	> h2 { //card-broad
 		line-height: 60px;
 	}
 
-	h2 + .card-rating-number {
+	h2 + .card-rating-number { //card-broad
 		font-size: $font-size-base*0.8125;
 		line-height: 60px;
 	}
 }
 
-	a.card-cat + p.card-text {
+	a.card-cat + p.card-text { //card-broad
 		margin-top: 10px;
 	}
 

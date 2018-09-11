@@ -1,3 +1,31 @@
-.navbar-nav {
-	
+.navbar{
+	padding-top: 0.7rem;
+	padding-bottom: 0.7rem;
 }
+
+.navbar-expand-md{
+	padding-right: 0;
+	padding-left: 0;
+
+	.navbar-nav {
+		font-size: 0.875rem;
+		font-weight: 500;
+		@media (min-width: 768px) {
+				margin-left: -0.95rem;
+				margin-right:  -0.95rem;}
+
+		
+		.nav-link {
+			@media (min-width: 768px) {
+				padding-left: 0.95rem;
+				padding-right:  0.95rem;
+				}
+			}
+		}
+	}
+
+.navbar-dark .navbar-nav .nav-link {
+	color: $white;
+	&:hover{
+		color:$primary;
+	}}

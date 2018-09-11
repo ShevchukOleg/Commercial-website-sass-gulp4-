@@ -1,4 +1,10 @@
-.btn-primary{
-	@include button-variant($primary, $primary);
-	color: $white;
+.info-inner-user .user-data .dropdown .btn {
+	padding: 0;
+	background: white;
+	border:none;
+		span{
+			font-size: 14px;
+			font-weight: 500;
+		}
+	
 }
