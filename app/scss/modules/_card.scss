@@ -1,3 +1,4 @@
+
 @mixin card-broad-border-type {
 	border:{
 		radius: 0;
@@ -17,7 +18,6 @@
 		color: $gray-500;}
 		}
 
-
 .card {
 	@include card-broad-border-type; //card-broad
 	border-top: none; //card-broad
@@ -34,26 +34,23 @@
 		}
 	
  	.bg-img { //card-broad
-		    background-image: url(/images/template-5.jpg);
+		    background-image: url(../images/template-5.jpg);
 		    background-size: cover;
 			background-position: center;
 			background-repeat: no-repeat;
 	}
 
 	&-img-left-wrapper{ //card-broad
-		min-height:183px;
-		display: block;
+		min-height: 180px;
 		overflow: hidden;
-		@media (min-width: 992px){
-			-webkit-box-flex: 0;
-	    	-ms-flex: 0 0 27.5%;
-	    	flex: 0 0 27.5%;
-	    	max-width: 27.5%;
-		}
+		
 		@media (min-width: 768px){
 			-webkit-box-flex: 0;
-	    	-ms-flex: 0 0 27.5%;
-	    	flex: 0 0 27.5%;
+	    	-ms-flex: 0 0 100%;
+	    	flex: 0 0 100%;
+	    	max-width: 100%;
+		}
+		@media (min-width: 992px){
 	    	max-width: 27.5%;
 		}
 	}
@@ -65,12 +62,6 @@
 		justify-content: space-between;//card-broad card
 		padding: $spacer $card-spacer-x; //card
 		}
-	&-statistic { //card-broad
-		display: flex;
-		justify-content: space-between;
-		width: 55%;
-	}
-
 
 	.card-autor {//card-broad card
 		display: flex;
@@ -110,28 +101,111 @@
 		text-align: center;
 		flex-basis:auto;}
 
-	.card-feedback, .card-likes {  //card-broad
-		border-left: 2px solid $cyan;
-	}
+	.card-rating-value { //card-broad card
+		color: $dark;
+		}
+	
+}
 
+.card-broad {
+	max-height: 183px;
+	@media (min-width: 992px){
+		.col-md-spesial-725{
+			height: 180px;
+		    -webkit-box-flex: 0;
+		    -ms-flex: 0 0 75%;
+			flex: 0 0 72.5%;
+			max-width: 72.5%;}
+		}
+	.card-body{
+		padding: 10px 0 0;
+
+		.card-body-inner{
+			padding: 14px 10px;
+
+		}
+
+		.card-price{
+			display: inline-block;
+			> h2 { //card-broad
+		margin-bottom: 15px;}
+			
+		}	
+}		
+	@media (min-width: 992px){
+		.card-body{
+			padding: 10px 32px 0;
+			.card-body-inner{
+			padding: 14px 0;
+
+		}
+		}
+	}
+		
+
+	h2 + .card-rating-number { //card-broad
+		font-size: $font-size-base*0.8125;
+	}
 	.card-rating-number {//card-broad
 		color: $cyan;
 		}
 
-	.card-rating-value { //card-broad card
-		color: $dark;
+		.card-feedback, .card-likes {  //card-broad
+		display: flex;
+		flex-direction: column;
+		padding-left: 24px;
+		border-left: 2px solid $cyan;
+		@media(min-width: 576px){
+			flex-direction: row;
+			justify-content: center;
+			padding-left: 20px;
 		}
-	> h2 { //card-broad
-		line-height: 60px;
+		.card-footer-icon{
+			padding-right: 0;
+			@media(min-width: 576px){
+				padding-right: 10px;
+			}
+		}
 	}
-
-	h2 + .card-rating-number { //card-broad
-		font-size: $font-size-base*0.8125;
-		line-height: 60px;
+	.card-footer {
+		padding: 15px 0 15px;
+		justify-content:start;
+		.card-autor {
+			margin-left: 15px;
+		}
+		.card-statistic { //card-broad
+		display: flex;
+		width: 58%;
+		} 
 	}
+		
+		@media (min-width: 992px){
+		.card-footer{
+			padding: 15px;
+		}
+	}
+		
 }
 
 	a.card-cat + p.card-text { //card-broad
 		margin-top: 10px;
 	}
 
+
+
+@media (min-width: 992px){
+.col-lg-spesial-934{
+	    -webkit-box-flex: 0;
+		-ms-flex: 0 0 93.548%;
+		flex: 0 0 93.548%;
+		max-width: 93.548%;
+}}
+
+@media (min-width: 1200px){
+.col-xl-9 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 75%;
+    flex: 0 0 75%;
+    max-width: 75%;
+	}
+	}

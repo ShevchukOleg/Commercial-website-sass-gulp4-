@@ -1,13 +1,19 @@
+.top-panel div.col-xl-2{
+	width: 137px;
+}
+
 .account-information {
 	margin-left: -1rem;
 	margin-right: -1rem;
-
 	.info-inner {
 		margin-left: 1rem;
 		margin-right: 1rem;}
 
 	.info-inner:last-of-type {
-		margin-left: 2rem;}
+		margin-left: 2rem;
+		margin-bottom: 5px;
+		}
+
 	
 	.messages-block {
 		display: flex;
@@ -187,6 +193,8 @@
 	.info-inner-user{
 		display: flex;
 		align-items: center;
+	
+
 
 		.user-logo {
 			display: inline-block;
