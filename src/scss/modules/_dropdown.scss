@@ -1,0 +1,21 @@
+.info-inner .advice .dropdown-menu, .info-inner .mail .dropdown-menu, .info-inner .acquiring .dropdown-menu  {
+	margin: 7px 0 0;
+}
+
+.info-inner-user .user-data .dropdown-menu{
+	padding-top: 0.5rem;
+	margin: 23px 0 0;
+	.dropdown-item {
+		font-size: 12px;
+		line-height: 36px;
+		padding:0 2.25rem 0 1.4rem;
+	}
+}
+
+.info-inner-user .user-data .dropdown-toggle::after {
+	font-family: 'Fontawesome';
+	content: '\f107';
+	border:none;
+	margin-left: 12px;
+	vertical-align: -2px; 
+}
